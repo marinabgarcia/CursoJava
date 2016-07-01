@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 
 public class PruebaCentradoFuente {
 	public static void main(String[] args) {
-		MarcoImagen marco = new MarcoImagen();
+		MarcoTexto marco = new MarcoTexto();
 		marco.setVisible(true);
 		marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -23,7 +23,7 @@ class MarcoTexto extends JFrame {
 	public MarcoTexto() {
 		setSize(400, 400);
 		setTitle("Prueba Figuras con fuentes");
-		LaminaConImagen lamina = new LaminaConImagen();
+		LaminaConTexto lamina = new LaminaConTexto();
 		add(lamina);
 	}
 }

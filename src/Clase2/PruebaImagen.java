@@ -7,36 +7,43 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class PruebaImagen {
 	public static void main(String[] args) {
-		MarcoTexto marco = new MarcoTexto();
-		marco.setVisible(true);
-		marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		try {
+			MarcoImagen marco = new MarcoImagen();
+			marco.setVisible(true);
+			marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, "Error al cargar la imagen");
+		}
 	}
 }
 
 class MarcoImagen extends JFrame {
-	public MarcoImagen() {
+	public MarcoImagen() throws IOException {
+
 		setSize(1200, 1200);
 		setTitle("Prueba con imagen");
-		LaminaConImagen lamina = new LaminaConImagen();
+		LaminaConImagen lamina;
+		lamina = new LaminaConImagen();
 		add(lamina);
+
 	}
 }
 
 class LaminaConImagen extends JPanel {
 	private Image imagen;
 
-	public LaminaConImagen() {
+	public LaminaConImagen() throws IOException{
 		File input = new File("src/icono.jpg");
-		try {
+
 			imagen = ImageIO.read(input);
-		} catch (IOException e) {
-			e.printStackTrace();
-			System.out.println("No se encuentra la imagen");
-		}
+		
 	}
 
 	public void paintComponent(Graphics g) {
