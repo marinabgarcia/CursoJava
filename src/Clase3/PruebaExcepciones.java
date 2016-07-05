@@ -1,9 +1,17 @@
 package Clase3;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-import java.io.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.ButtonGroup;
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 
 public class PruebaExcepciones
 
@@ -28,16 +36,13 @@ public class PruebaExcepciones
  */
 
 class MarcoDePruebaDeExcepciones extends JFrame {
-
 	public MarcoDePruebaDeExcepciones()
-
 	{
 		setTitle("PruebaDeExcepcion");
 		LaminaDePruebaDeExcepciones lamina = new LaminaDePruebaDeExcepciones();
 		add(lamina);
 		pack();
 	}
-
 }
 
 /**
@@ -132,7 +137,7 @@ class LaminaDePruebaDeExcepciones extends Box {
 		// excepciones que pueda haber en el método actionPerformed del oyente.
 
 		// @param s el rótulo del botón de radio
-		// ©param oyente el oyente de acciones de este botón 1*
+		// ©param oyente el oyente de acciones de este botón 
 	}
 
 	private void ponerBotonDeRadio(String s, ActionListener oyente) {
