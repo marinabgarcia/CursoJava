@@ -55,7 +55,7 @@ class MarcoPruebaFormato extends JFrame {
 		campoInt2.setValue(new Integer(100));
 		campoInt2.setFocusLostBehavior(JFormattedTextField.COMMIT);
 		ponerFila("Numero (commit): ", campoInt2);
-		
+
 		JFormattedTextField campoInt3 = new JFormattedTextField(NumberFormat.getNumberInstance());
 		campoInt3.setValue(new Double(100.8));
 		ponerFila("Numero con coma: ", campoInt3);
@@ -64,6 +64,11 @@ class MarcoPruebaFormato extends JFrame {
 		campoInt4.setValue(new Integer(100));
 		campoInt4.setInputVerifier(new Verificador());
 		ponerFila("Numero verificado: ", campoInt4);
+
+		JFormattedTextField campoInt5 = new JFormattedTextField(NumberFormat.getIntegerInstance());
+		campoInt5.setValue(new Integer(100));
+		campoInt5.setFocusLostBehavior(JFormattedTextField.PERSIST);
+		ponerFila("Numero (persist): ", campoInt5);
 
 		JFormattedTextField campoMonetario = new JFormattedTextField(NumberFormat.getCurrencyInstance());
 		campoMonetario.setValue(new Double(10));
@@ -78,6 +83,10 @@ class MarcoPruebaFormato extends JFrame {
 		JFormattedTextField campoFechas2 = new JFormattedTextField(format);
 		campoFechas2.setValue(new Date());
 		ponerFila("Date corto no clemente: ", campoFechas2);
+
+		JFormattedTextField campoFechas3 = new JFormattedTextField(DateFormat.getDateInstance(DateFormat.LONG));
+		campoFechas3.setValue(new Date());
+		ponerFila("Date Largo: ", campoFechas3);
 
 		MaskFormatter formateador;
 		try {
