@@ -42,7 +42,7 @@ class LaminaBotonesS2 extends JPanel {
 		JButton boton = new JButton(nombre);
 		add(boton);
 
-		boton.addActionListener(new ActionListener() {
+		ActionListener accion = new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -50,7 +50,8 @@ class LaminaBotonesS2 extends JPanel {
 				setBackground(colorDeFondo);
 
 			}
-		});
+		};
+		boton.addActionListener(accion);
 
 	}
 }

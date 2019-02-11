@@ -3,10 +3,10 @@ package Clase3;
 import java.util.Date;
 
 public class Empleado {
-	static final int AUMENTO = 5;
-	private Double sueldo;
+	
+	protected Double sueldo;
 	private Date fechaContrato;
-	private String nombre;
+	public String nombre;
 
 	public Empleado(String nombre, double sueldo, Date fechaContrato) {
 		this.nombre = nombre;
@@ -18,6 +18,7 @@ public class Empleado {
 	}
 
 	public Double getSueldo() {
+		System.out.println("Empleado");
 		return sueldo;
 	}
 

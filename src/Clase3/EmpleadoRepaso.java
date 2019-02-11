@@ -16,11 +16,14 @@ public class EmpleadoRepaso {
 		e.setNombre("Pedro");
 		listaEmpleado.add(e);
 		
-		for(Empleado emp : listaEmpleado){
-			emp.subirSueldo();
-			System.out.println(emp.toString());
-		}
+		Empleado admin = new Administrador();
+		admin.getSueldo();
 		
+		for(Empleado emp : listaEmpleado){
+			System.out.println(emp.getNombre());
+			emp.subirSueldo();
+		}
 	}
-
 }
+
+

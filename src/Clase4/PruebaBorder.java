@@ -74,7 +74,6 @@ class LaminaBorder extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				laminaDemo.setBorder(b);
-
 			}
 		});
 		grupo.add(boton);

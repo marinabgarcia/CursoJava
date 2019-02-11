@@ -49,7 +49,7 @@ class LaminaBotones extends JPanel {
 		add(botonRojo);
 
 	}
-
+	
 	class AccionColor implements ActionListener {
 		private Color colorDeFondo;
 
@@ -64,4 +64,7 @@ class LaminaBotones extends JPanel {
 
 		}
 	}
+
 }
+
+

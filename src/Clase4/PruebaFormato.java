@@ -41,11 +41,20 @@ class MarcoPruebaFormato extends JFrame {
 		JPanel laminaBotones = new JPanel();
 		botonOk = new JButton("OK");
 		laminaBotones.add(botonOk);
-		add(laminaBotones, BorderLayout.SOUTH);
+		add(botonOk, BorderLayout.SOUTH);
 
 		laminaPrincipal = new JPanel();
 		laminaPrincipal.setLayout(new GridLayout(0, 3));
 		add(laminaPrincipal, BorderLayout.CENTER);
+		
+		/*JTextField campo = new JTextField("hola");
+		campo.setText(campo.getText()+" como estas");
+		//agrego rotulo
+		laminaPrincipal.add(new JLabel("Hola "));
+		//agrego jtextfield
+		laminaPrincipal.add(campo);
+		final JLabel rotuloValor = new JLabel(campo.getText());
+		laminaPrincipal.add(rotuloValor);*/
 
 		JFormattedTextField campoInt = new JFormattedTextField(NumberFormat.getIntegerInstance());
 		campoInt.setValue(new Integer(100));

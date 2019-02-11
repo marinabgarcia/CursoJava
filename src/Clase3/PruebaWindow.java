@@ -27,8 +27,6 @@ class MarcoWindow extends JFrame {
 
 class Terminador implements WindowListener {
 
-	@Override
-	public void windowOpened(WindowEvent e) {}
 
 	@Override
 	public void windowClosing(WindowEvent e) { System.exit(0);}
@@ -47,5 +45,11 @@ class Terminador implements WindowListener {
 
 	@Override
 	public void windowDeactivated(WindowEvent e) {}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

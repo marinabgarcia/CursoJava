@@ -32,7 +32,8 @@ class Lamina extends JPanel {
 
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-
 		g.drawString("Texto sobre lamina", 100, 50);
+		g.drawRect(100, 100, 100, 100);
+		g.drawLine(100, 50, 200, 200);
 	}
 }

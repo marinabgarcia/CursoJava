@@ -41,7 +41,7 @@ class LaminaCasillas extends JPanel {
 
 	public LaminaCasillas() {
 
-		setLayout(new BorderLayout());
+		this.setLayout(new BorderLayout());
 		// se agrega el rotulo para el ejemplo
 		JLabel rotulo = new JLabel("El veloz murcielago hindu comia tambien cascaras de kiwi", JLabel.CENTER);
 		rotulo.setFont(new Font("Serif", Font.PLAIN, TAMFUENTE));

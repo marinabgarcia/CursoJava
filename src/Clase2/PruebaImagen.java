@@ -12,20 +12,20 @@ import javax.swing.JPanel;
 
 public class PruebaImagen {
 	public static void main(String[] args) {
-		try {
+//		try {
 			MarcoImagen marco = new MarcoImagen();
 			marco.setVisible(true);
 			marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "Error al cargar la imagen");
-		}
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//			JOptionPane.showMessageDialog(null, "Error al cargar la imagen");
+//		}
 	}
 }
 
 class MarcoImagen extends JFrame {
-	public MarcoImagen() throws IOException {
+	public MarcoImagen() {
 
 		setSize(1200, 1200);
 		setTitle("Prueba con imagen");
@@ -39,11 +39,16 @@ class MarcoImagen extends JFrame {
 class LaminaConImagen extends JPanel {
 	private Image imagen;
 
-	public LaminaConImagen() throws IOException{
+	//Constructor de la lamina
+	public LaminaConImagen() {
 		File input = new File("src/icono.jpg");
-
+		try {
 			imagen = ImageIO.read(input);
-		
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 
 	public void paintComponent(Graphics g) {

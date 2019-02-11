@@ -32,8 +32,10 @@ class MarcoColor extends JFrame {
 }
 
 class LaminaConRelleno extends JPanel {
+	
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
+		
 		Graphics2D g2 = (Graphics2D) g;
 
 		// Dibujar rectangulo
@@ -43,7 +45,7 @@ class LaminaConRelleno extends JPanel {
 		double altura = 150;
 
 		Rectangle2D rectangulo = new Rectangle2D.Double(xizq, ysup, anchura, altura);
-		g2.setColor(Color.WHITE);
+		g2.setPaint(Color.WHITE);
 		g2.draw(rectangulo);
 		
 		g2.setPaint(Color.BLUE);
